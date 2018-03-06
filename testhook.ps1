@@ -1,3 +1,5 @@
+$Error.Clear();
+
 start-sshagent
 
 $count = 1000;
@@ -16,4 +18,9 @@ while ($count -gt 0) {
     $count--;
 
     Start-Sleep -s 1;
+
+    if ($Error.Count -gt 0) {
+        Write-Host $Error;
+        return;
+    }
 }
