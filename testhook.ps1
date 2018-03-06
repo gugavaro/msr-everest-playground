@@ -1,8 +1,7 @@
-$Error.Clear();
-
 start-sshagent
 
 $count = 1000;
+$Error.Clear();
 
 while ($count -gt 0) {
     [guid]::NewGuid().ToString() > README.md
